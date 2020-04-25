@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html style="height: 100%;">
+  <head>
+    <title>Dicampa</title>
+    <meta charset="UTF-8"> <!--Encoding -->
+    <meta name="google-site-verification" content="" />
+    <meta name="description" content="">
+    <meta name="keywords" content="Dicampa, arcor, golosinas">
+    <meta name="author" content="Defina Polito">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1"> <!--Movile first -->
+    <script src="js/jquery.min.js"></script><!--JQuery 1.11.2 local -->
+    <script type="text/javascript" src="js/home.js"></script>
+    <script type="text/javascript" src="js/slick.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/materialize.min.css">
+    <script type="text/javascript" src="js/materialize.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/slick.css">
+    <link rel="stylesheet" type="text/css" href="css/slick-theme.css">
+    <link rel="stylesheet" type="text/css" href="css/responsive.css">
+    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+    <script src="js/slick.min.js" type="text/javascript" charset="utf-8"></script>
+    <meta http-equiv="imagetoolbar" content="no" /> <!-- No save icons -->
+  </head>
+  <body style="height: 100%;">
+    <div class="navbar-fixed">
+      <nav>
+        <div class="nav-wrapper">
+          <a id="#homeButton" href="./" class="brand-logo">
+            <img height="53" class="logo-nav" draggable="false" src="./images/logo.png">
+          </a>
+          <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="fa fa-bars" aria-hidden="true"></i></a>
+          <ul class="right hide-on-med-and-down">
+            <li><a href="#quienes-somos">Quiénes somos</a></li>
+            <li><a href="#instalaciones">Marcas</a></li>
+            <li><a href="#tratamientos">Prooductos</a></li>
+            <li><a href="#instituciones-y-sociedades">Consulta</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+        </ul>
+        </div>
+      </nav>
+    </div>
+    <section id="logo">
+      <h1>Distribuiudora oficial de productos</h1>
+      <img src="./images/arcor.png"/>
+    </section>
+    <section  id="home">
+      <img  class="logo-home" draggable="false" src="./images/brands.png">
+    </section>
+    <section id="quienes-somos">
+        <h1 class="section-title">QUIENES SOMOS</h1>
+      <span class="line white"></span>
+      <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</h2>
+    </section>
+    <section id="consulta">
+        <h1 class="section-title">CONSULTA</h1>
+      <span class="line white"></span>
+      <div class="row">
+    <form class="col s12 m6 offset-m3 card">
+      <div class="row">
+        <div class="input-field col s6">
+          <input id="name" type="text" class="validate">
+          <label for="name">Nombre</label>
+        </div>
+        <div class="input-field col s6">
+          <input id="email" type="text" class="validate">
+          <label for="email">Email</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+          <textarea id="textarea1" class="materialize-textarea"></textarea>
+          <label for="textarea1">Textarea</label>
+        </div>
+      </div>
+    </form>
+  </div>
+    </section>
+    <section class="contact row" id="contacto">
+      <div class="contact-info col m5">
+        <div class="row">
+          <h1 class="section-title">CONTACTO</h1>
+          <span class="line white"></span>
+          </br>
+          </br>
+          <h2>Teléfono</h2>
+          <p>(+54) (011) 4563-3142</p>
+          </br>
+          <h2>Dirección</h2>
+          <p>Dirección, CABA, Buenos Aires</p>
+          </br>
+          <h2>Email</h2>
+          <p>email@gmail.com
+        </div>
+      </div>
+      <div class="contact-map col m7">
+        <div id="map"></div>
+      </div>
+    </section>
+  </body>
+  <script>
+    function enterPage() {
+      clearInterval(interval);
+      $('#wrapper_top').animate({"opacity": 0.5}, 1000, function(){
+        $('#page').removeClass("hidden");
+        $('#page').animate({"opacity": 1}, 1000);
+        $('#wrapper_top').animate({"opacity": 0}, 1000);
+        $('#wrapper_top').addClass("hidden");
+        google.maps.event.trigger(map, 'resize');
+      });
+    }
+
+    function initMap() {
+      var map = new google.maps.Map(document.getElementById('map'), {
+        zoom: 11,
+        center: new google.maps.LatLng(-34.5966694,-58.3997904),
+        styles: [
+          {
+            "featureType": "administrative",
+            "elementType": "labels.text.fill",
+            "stylers": [
+            {
+              "color": "#444444"
+            }
+            ]
+          },
+          {
+            "featureType": "administrative.country",
+            "elementType": "labels",
+            "stylers": [
+            {
+              "color": "#a0a0a4"
+            }
+            ]
+          },
+          {
+            "featureType": "administrative.locality",
+            "elementType": "all",
+            "stylers": [
+            {
+              "visibility": "on"
+            }
+            ]
+          },
+          {
+            "featureType": "administrative.locality",
+            "elementType": "labels",
+            "stylers": [
+            {
+              "color": "#a0a0a4"
+            },
+            {
+              "weight": "0.02"
+            }
+            ]
+          },
+          {
+            "featureType": "administrative.neighborhood",
+            "elementType": "all",
+            "stylers": [
+            {
+              "visibility": "on"
+            }
+            ]
+          },
+          {
+            "featureType": "administrative.neighborhood",
+            "elementType": "labels",
+            "stylers": [
+            {
+              "color": "#a0a0a4"
+            },
+            {
+              "weight": "0.01"
+            }
+            ]
+          },
+          {
+            "featureType": "landscape",
+            "elementType": "all",
+            "stylers": [
+            {
+              "color": "#f2f2f2"
+            }
+            ]
+          },
+          {
+            "featureType": "poi",
+            "elementType": "all",
+            "stylers": [
+            {
+              "visibility": "off"
+            }
+            ]
+          },
+          {
+            "featureType": "road",
+            "elementType": "all",
+            "stylers": [
+            {
+              "saturation": -100
+            },
+            {
+              "lightness": 45
+            }
+            ]
+          },
+          {
+            "featureType": "road",
+            "elementType": "labels",
+            "stylers": [
+            {
+              "visibility": "off"
+            }
+            ]
+          },
+          {
+            "featureType": "road.highway",
+            "elementType": "all",
+            "stylers": [
+            {
+              "visibility": "on"
+            }
+            ]
+          },
+          {
+            "featureType": "road.arterial",
+            "elementType": "labels.icon",
+            "stylers": [
+            {
+              "visibility": "on"
+            }
+            ]
+          },
+          {
+            "featureType": "transit",
+            "elementType": "all",
+            "stylers": [
+            {
+              "visibility": "off"
+            }
+            ]
+          },
+          {
+            "featureType": "water",
+            "elementType": "all",
+            "stylers": [
+              {
+                "color": "#a0a0a4"
+              },
+              {
+                "visibility": "on"
+              }
+            ]
+          }
+        ],
+        mapTypeId: google.maps.MapTypeId.ROADMAP
+      });
+
+      var icon = {
+        url: './images/pin.png',
+        scaledSize: new google.maps.Size(50, 50), // scaled size
+      };
+      // MARKERS
+
+      var recoleta = new google.maps.Marker({
+        position: {lat: -34.5966694, lng: -58.3997904},
+        icon: icon,
+        map: map,
+        title: 'Microcentro - CABA ',
+      });
+      var infowindowRecoleta = new google.maps.InfoWindow({
+        content: ('<div>Microcentro CABA </div>')
+      });
+      google.maps.event.addListener(recoleta, 'click', function() {
+        infowindowRecoleta.open(map, recoleta);
+      });
+    }
+  </script>
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBQnHJcYn8QdK7KO5AcA5h2QXXGazPfeiM&callback=initMap"></script>
+</html>

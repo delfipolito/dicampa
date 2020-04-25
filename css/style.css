@@ -1,0 +1,245 @@
+/*FONTS*/
+@font-face {
+  font-family: 'SansRegular';
+  src: url('../fonts/Sans/SourceSansPro-Regular.ttf') format('opentype');
+}
+@font-face {
+  font-family: 'SansLight';
+  src: url('../fonts/Sans/SourceSansPro-Light.ttf') format('opentype');
+}
+@font-face {
+  font-family: 'SansBold';
+  src: url('../fonts/Sans/SourceSansPro-Bold.ttf') format('opentype');
+}
+@font-face {
+  font-family: 'SansSemibold';
+  src: url('../fonts/Sans/SourceSansPro-Semibold.ttf') format('opentype');
+}
+
+.m2 .freebirdFormviewerViewItemsItemItem {
+  border: 1px solid white !important;
+  padding: 0 !important;
+}
+
+/*GENERAL*/
+html,
+body {
+  min-height: 100%;
+}
+html,
+body,
+section {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  color: black;
+  font-family: 'SansRegular';
+}
+section {
+  position: relative;
+}
+.container {
+  width: 90%;
+}
+.relative {
+  position: relative;
+}
+.hidden {
+  display: none !important;
+}
+.no-padding {
+  padding: 0px !important;
+}
+.centered {
+  text-align: center;
+}
+.left-aligned {
+  text-align: left !important;
+}
+.valign-wrapper {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  height: 100% !important;
+}
+.valign-wrapper .valign {
+  display: block;
+  text-align: center;
+}
+
+/*TITLE WITH LINE*/
+h1 {
+  margin-bottom: 10px;
+}
+.line {
+  width: 42px;
+  display: block;
+  border-top: 2px solid #4a4a4a;
+  vertical-align: top;
+  margin-bottom: 13px;
+}
+
+.line.white {
+  border-top: 2px solid #fff !important;
+}
+
+/*TEXTS*/
+h3 {
+  font-family: 'SansBold';
+  font-size: 25px;
+  display: inline;
+}
+
+/*SECTIONS*/
+section {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+.grey-section {
+  background-color: #f4f4f4;
+  color: #4a4a4a;
+}
+.black-section {
+  background-color: black;
+}
+.section-title {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 16px;
+}
+/*NAVBAR*/
+nav {
+  color: #4a4a4a;
+  background-color: rgba(255, 255, 255, 0.91) !important;
+}
+nav ul a {
+  color: #4a4a4a;
+  font-family: 'SansLight';
+  font-size: 16px;
+}
+nav ul a:hover {
+  background-color: rgba(255, 255, 255, 0.91) !important;
+}
+.facebook {
+  padding-top: 8px;
+}
+.logo-nav {
+  padding: 5px 15px 0;
+}
+
+a.anchor {
+  display: block;
+  position: relative;
+  top: -250px;
+  visibility: hidden;
+}
+
+/*HOME*/
+#logo {
+  text-align: center;
+}
+#logo h1 {
+  text-align: center;
+  font-family: 'SansBold';
+  font-size: 65px;
+  color: #dfd3c3;
+  margin-top: 100px;
+  margin-bottom: 15px;
+}
+#home {
+  height: auto;
+  min-height: 600px;
+  position: relative;
+  overflow: hidden;
+}
+#home img {
+  width: 100%;
+}
+.logo-home {
+  width: 30%;
+}
+
+/*WHO WE ARE*/
+#quienes-somos {
+  background: #dfd3c3;
+  color: white;
+  text-align: center;
+}
+#quienes-somos h2 {
+  font-size: 20px;
+  max-width: 70%;
+  margin: 20px auto 100px auto;
+  font-family: 'SansLight' !important;
+}
+#quienes-somos h1 {
+  font-family: 'SansBold';
+  font-size: 22px;
+  margin: 100px auto 0 auto;
+}
+#quienes-somos .line {
+  margin: 5px auto 13px auto;
+}
+
+/*Consulta*/
+#consulta {
+  background: #f0ece2;
+  color: #c7b198;
+  text-align: center;
+  padding-bottom: 85px;
+}
+#consulta h2 {
+  font-size: 20px;
+  max-width: 70%;
+  margin: 20px auto 100px auto;
+  font-family: 'SansLight' !important;
+}
+#consulta h1 {
+  font-family: 'SansBold';
+  font-size: 22px;
+  margin: 100px auto 0 auto;
+}
+#consulta .line {
+  border-top: 2px solid #c7b198 !important;
+  margin: 5px auto 13px auto;
+}
+
+/*CONTACT*/
+.contact {
+  height: 80%;
+  margin-bottom: 0 !important;
+  padding: 0 !important;
+}
+.contact-info {
+  background-color: #596e79;
+  color: #fff;
+  height: 100%;
+  padding-left: 4vw !important;
+  padding-right: 3vw !important;
+}
+.contact h2 {
+  font-size: 18px;
+  letter-spacing: 0.5px;
+  font-family: 'SansSemibold' !important;
+  border-bottom: solid 2px;
+  padding-bottom: 13px;
+  margin-bottom: 10px;
+}
+.contact p {
+  color: #bdbdbd;
+  font-size: 17px;
+  font-family: 'SansLight' !important;
+  margin: 0;
+}
+.contact-map {
+  height: 100%;
+  padding: 0px !important;
+}
+#map {
+  height: 100%;
+  width: 100%;
+}
